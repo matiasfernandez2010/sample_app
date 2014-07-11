@@ -3,11 +3,13 @@ ruby '2.0.0'
 
 gem 'rails', '4.1.4'
 gem 'pg'
-# gem 'sqlite3'
-gem 'taps'
+gem 'heroku'
 
 group :development, :test do 
 	gem 'rspec-rails'
+	gem 'guard-rspec'
+	gem 'spring-commands-rspec'
+	gem 'rb-fsevent' if 'uname' =~ /Darwin/
 end
 
 group :test do 
